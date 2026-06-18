@@ -1,0 +1,141 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --bgNav: #333;
+    --fonte: white;
+    --bgSite: #f1f1f1;
+    --bgHover: #aaa;
+
+
+}
+body {
+    background-color: rgb(178, 178, 178);
+    font-family: sans-serif;
+}
+
+header{
+    background-color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+label[for="btn-menu"] {
+    height: 50px;
+    flex: 1;
+    background-color: var(--bgNav);
+    cursor: pointer;
+    justify-content: center;  /* horizontal */   
+    align-items: center; /* vertical */
+    color: var(--fonte);
+    display: none;
+
+}
+nav{
+    background-color:  var(--bgNav);
+    display: flex;
+    flex-direction: row;
+    
+}
+nav a {         /* nav a pega todos que tão dentro e nav > a so dentro daquele primeiro nav */
+    text-decoration: none;
+    color: var(--fonte);
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+    padding: 16px;
+}
+nav a:hover{
+    background-color: var(--bgHover);
+    margin-bottom: 20px;
+}
+
+main{
+display: flex;
+}
+
+#coluna-75{
+    width: 75%;
+  
+
+}
+
+#coluna-25{
+    width: 25%;
+  
+    padding-left: 20px;
+}
+
+.row{
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    
+}
+
+.col35{
+    width: 25%;
+
+}
+
+.col75{
+    width: 75%;
+}
+section{
+    background-color: var(--fonte);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.imgFake{
+    background-color: var(--bgHover) ;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+#navSocial{
+    width: 100%;
+    height: 50px;
+    background-color: var(--fonte);
+    display: flex;
+    position: relative;
+}
+
+#navSocial .imgFake{
+    height: 100%;
+    width: 25%;
+    outline: 1px solid black;
+}
+
+footer{
+    background-color: var(--fonte);
+    text-align: center;
+    padding: 30px;
+}
+@media (max-width: 800px) {
+    main {
+        flex-direction: column;
+    }
+    #coluna-75{
+        width: 100%;
+    }
+    #coluna-25{
+        width: 100%;
+        padding-left: 0;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+    }
+    label[for="btn-menu"] {
+        display: flex;
+        
+    }
+
+    .active{
+        display: flex;
+    }
+}
